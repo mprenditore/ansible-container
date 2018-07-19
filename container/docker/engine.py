@@ -916,7 +916,7 @@ class Engine(BaseEngine, DockerSecretsMixin):
             url = REMOVE_HTTP.sub('', url)
             repository = "%s/%s" % (url.rstrip('/'), repository)
 
-        logger.info('Tagging %s' % repository)
+        logger.info('### Tagging %s' % repository)
         self.client.api.tag(image_id, repository, tag=tag)
 
         logger.info('Pushing %s:%s...' % (repository, tag))
