@@ -101,7 +101,7 @@ class HostCommand(object):
                                    help=(u'Name of a registry defined in container.yml, or a registry URL. When '
                                          u'providing a URL, include the repository or project namespace.'),
                                    dest='push_to', default=None)
-            subparser.add_argument('--tag', action='store',
+            subparser.add_argument('--tag', action='store', nargs='+',
                                    help=u'Tag the images before pushing.',
                                    dest='tag', default=None)
 

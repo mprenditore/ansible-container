@@ -1042,8 +1042,12 @@ def conductorcmd_push(engine_name, project_name, services, **kwargs):
     repository_prefix =kwargs.pop('repository_prefix')
 
     engine = load_engine(['PUSH', 'LOGIN'], engine_name, project_name, services)
-    logger.info(u'Engine integration loaded. Preparing push.',
+    logger.info(u'### Engine integration loaded. Preparing push.',
                 engine=engine.display_name)
+
+    logger.info('##### TAG #####')
+    logger.info(tag)
+    logger.info('###############')
 
     # Verify that we can authenticate with the registry
     username, password = engine.login(username, password, email, url, config_path)
