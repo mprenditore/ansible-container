@@ -46,6 +46,7 @@ LOGGING = {
 class HostCommand(object):
 
     AVAILABLE_COMMANDS = {'help': 'Display this help message',
+                          'steste': 'ste ste test message',
                           'version': 'Display Ansible Container version information',
                           'init': 'Initialize a new Ansible Container project',
                           'install': 'Install a service from Ansible Galaxy',
